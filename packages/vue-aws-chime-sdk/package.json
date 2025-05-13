@@ -1,0 +1,52 @@
+{
+  "name": "@rowinbot/vue-aws-chime-sdk",
+  "version": "0.0.1",
+  "description": "Vue components and utilities for running realtime meetings with AWS Chime SDK",
+  "author": "Rowin Hernandez - @rowinbot",
+  "private": false,
+  "packageManager": "pnpm@10.11.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rowinbot/vue-aws-chime-sdk.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "git@github.com:rowinbot/vue-aws-chime-sdk.git"
+  },
+  "homepage": "https://github.com/rowinbot/vue-aws-chime-sdk/packages/vue-aws-chime-sdk",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "exports": {
+    "./components/*": "./dist/components/*.js",
+    "./composables/*": "./dist/composables/*.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "fast-glob": "^3.3.3",
+    "glob": "^11.0.2",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.3",
+    "vue-tsc": "^2.2.8"
+  }
+}
