@@ -1,0 +1,18 @@
+{
+  "name": "vue-aws-chime-sdk-monorepo",
+  "version": "0.0.1",
+  "description": "Monorepo for AWS Chime SDK for Vue",
+  "author": "Rowin Hernandez - @rowinbot",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rowinbot/vue-aws-chime-sdk.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "git@github.com:rowinbot/vue-aws-chime-sdk.git"
+  },
+  "homepage": "https://github.com/rowinbot/vue-aws-chime-sdk",
+  "scripts": {}
+}

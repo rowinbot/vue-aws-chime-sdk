@@ -6,5 +6,9 @@
 </template>
 
 <script setup lang="ts">
+defineOptions({
+  name: "MyOtherComponent",
+});
+
 const hello = "OTHER!";
 </script>

@@ -1,6 +1,12 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "noEmit": false,
+
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
     /* Linting */
@@ -14,10 +20,5 @@
       "@/*": ["./lib/*"]
     }
   },
-  "include": [
-    "lib/**/*.ts",
-    "lib/**/*.vue",
-    "lib/**/*.tsx",
-    "lib/vue-shims.d.ts"
-  ]
+  "include": ["lib/**/*", "lib/vue-shim.d.ts"]
 }
