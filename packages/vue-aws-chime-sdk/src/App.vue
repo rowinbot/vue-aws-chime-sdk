@@ -1,9 +1,11 @@
 <template>
   <HelloWorld msg="Vite + Vue" />
+  <MyOtherComponent />
 </template>
 
 <script setup lang="ts">
 import HelloWorld from "@lib/components/hello-world.vue";
+import MyOtherComponent from "@lib/components/my-other-component.vue";
 </script>
 
 <style scoped>

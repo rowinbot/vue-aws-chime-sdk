@@ -20,5 +20,6 @@
       "@/*": ["./lib/*"]
     }
   },
-  "include": ["lib/**/*", "lib/vue-shim.d.ts"]
+  "include": ["lib/**/*", "lib/vue-shim.d.ts"],
+  "exclude": ["lib/**/*.css.ts"]
 }

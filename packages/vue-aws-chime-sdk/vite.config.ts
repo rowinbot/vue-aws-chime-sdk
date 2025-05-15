@@ -4,13 +4,15 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 import { extname, relative } from "node:path";
 import { fileURLToPath } from "node:url";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+
 import glob from "fast-glob";
 
 // No-entry point build: https://rollupjs.org/configuration-options/#input
 const entries = Object.fromEntries(
   glob
     .sync("lib/**/*.{ts,tsx,vue}", {
-      ignore: ["lib/**/*.d.ts"],
+      ignore: ["lib/**/*.{d.ts,css.ts}"],
     })
     .map((file) => {
       let fileName = file;
@@ -30,8 +32,10 @@ const entries = Object.fromEntries(
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), tsconfigPaths()],
+  plugins: [vue(), tsconfigPaths(), vanillaExtractPlugin({})],
   build: {
+    manifest: true,
+    ssrManifest: true,
     lib: {
       entry: entries,
       formats: ["es"],

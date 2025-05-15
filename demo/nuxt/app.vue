@@ -1,7 +1,5 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
     <HelloWorld msg="" required />
     <MyOtherComponent />
   </div>
